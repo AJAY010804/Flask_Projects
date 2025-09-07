@@ -37,13 +37,20 @@
   </style>
 </head>
 <body>
+  {% include "nav.html" %}
   <div class="container">
-
+    <img id="banner" src="/static/bnner.jpg" height="320" alt="banner.jpg">
     <h1 class="text-center mt-2 mb-4">{{company_name}} Career</h1>
-    <img id="banner" src="https://the-learn-log-website.onrender.com/static/bnner.jpg" height="320" alt="banner.jpg">
-    <h2 class="text-center mt-2 mb-4">About - {{company_name}}</h2>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>   
+    <div class="row" style="margin-bottom: 16px">
+      <div class="col-md-6">
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+            <img src="/static/office.jpg" height="320" alt="office.jpg">
+        </div>
+    </div>
+    
     <h2 class="text-center mt-2 mb-4">Open Positions</h2>
     <p class="text-center">
       {% for job in jobs %}
@@ -51,10 +58,9 @@
       {% endfor %}
     </p>
     <div class="text-center">
-      <button class="btn btn-primary btn-lg">Contact Us</button>
-      <p class="mt-4">&copy Copyright 2025, TheLearnLog</p>
+      <a href="mailto:loverboy.100.90.aj@gmail.com?subject=General%20enquiry&body=My%20Resume%20Link%3A%20%" class="btn btn-primary btn-lg">Contact Us</a>
     </div>
-    
+    {% include "footer.html" %}
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
