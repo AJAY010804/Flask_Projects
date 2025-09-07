@@ -4,21 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Learn Log</title>
+  <title>The Learn Log Career</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <style>
-    h1{
+    /* h1{
       font-size; 40px;
       color: rgb(50, 50, 50);
       text-align: center;
       font-family: Roboto;
       font-weight: normal;
-    }
+    } */
     #banner{
       width: 100%;
       height 360px;
       object-fit: cover;
     }
-    h2{
+    /* h2{
       font-size: 32px;
       color: rgb(100, 100, 100);
       font-family: Roboto;
@@ -32,23 +33,29 @@
     #container{
       max-width: 720px;
       margin: 0 auto;
-    }
+    } */
   </style>
 </head>
 <body>
-  <div id="container">
+  <div class="container">
 
-    <h1>The Learn Log</h1>
+    <h1 class="text-center mt-2 mb-4">{{company_name}} Career</h1>
     <img id="banner" src="https://3f0d105b-dea0-4df4-b7b5-feae45e727a1-00-1gwwd56o2rzj8.sisko.replit.dev/static/bnner.jpg" height="320" alt="banner.jpg">
-    <h2>About - The Learn Log</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
-    <div style="text-align: center;">
-      <h2>Open Positions</h2>
-      <p>TODO - Show the books here</p>
-      <button>Contact Us</button>
+    <h2 class="text-center mt-2 mb-4">About - {{company_name}}</h2>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>   
+    <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+    <p class="text-center">
+      {% for job in jobs %}
+        {% include "jobitem.html" %}
+      {% endfor %}
+    </p>
+    <div class="text-center">
+      <button class="btn btn-primary btn-lg">Contact Us</button>
+      <p class="mt-4">&copy Copyright 2025, TheLearnLog</p>
     </div>
     
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
