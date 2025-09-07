@@ -22,7 +22,7 @@ This is a Flask web application project that was imported from GitHub and set up
 The server is set to debug mode for development convenience.
 
 ## Configuration
-- **Host**: 
+- **Host**: https://the-learn-log-website.onrender.com
 - **Port**: 
 - **Debug Mode**: Enabled for development
 - **Deployment**: 
