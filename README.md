@@ -1,4 +1,4 @@
-# Flask Projects
+# Flask Projects TheLearnLog Career Website
 
 ## Overview
 This is a Flask web application project that was imported from GitHub and set up to run in the Replit environment. The project provides a basic Flask application structure with API endpoints and a modern web interface.
